@@ -8,12 +8,12 @@ export function fetchCoreContributorListJSON() {
   return makeFakeAPICall('/react/contributors', coreContributorListJSON);
 }
 
-export function fetchUserProfileJSON(id) {
-  return makeFakeAPICall(`/${id}/details`, userProfileJSON[id]);
+export const fetchUserDetails = (customTimeout) => (id) => {
+  return makeFakeAPICall(`/${id}/details`, userProfileJSON[id], customTimeout);
 }
 
-export function fetchUserRepositoriesListJSON(id) {
-  return makeFakeAPICall(`/${id}/repositories`, userRepositoriesListJSON[id]);
+export const fetchUserRepos = (customTimeout) => (id) => {
+  return makeFakeAPICall(`/${id}/repositories`, userRepositoriesListJSON[id], customTimeout);
 }
 
 let fakeRequestTime = 1000;
@@ -43,7 +43,7 @@ export function setPaused(url, isPaused) {
   }
 }
 
-function makeFakeAPICall(url, result) {
+function makeFakeAPICall(url, result, customTimeout=0) {
   let i = 1;
   return new Promise(resolve => {
     isPausedUrl[url] = shouldPauseNewRequests;
@@ -58,7 +58,7 @@ function makeFakeAPICall(url, result) {
       if (i === 100) {
         resolve(result);
       } else {
-        setTimeout(notify, fakeRequestTime / 100);
+        setTimeout(notify, (fakeRequestTime+customTimeout) / 100);
       }
     }
     notifiers[url] = notify;

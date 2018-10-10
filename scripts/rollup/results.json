@@ -18,15 +18,15 @@
       "filename": "react.development.js",
       "bundleType": "NODE_DEV",
       "packageName": "react",
-      "size": 57366,
-      "gzip": 15703
+      "size": 57324,
+      "gzip": 15683
     },
     {
       "filename": "react.production.min.js",
       "bundleType": "NODE_PROD",
       "packageName": "react",
-      "size": 6245,
-      "gzip": 2651
+      "size": 6407,
+      "gzip": 2717
     },
     {
       "filename": "React-dev.js",
@@ -60,15 +60,15 @@
       "filename": "react-dom.development.js",
       "bundleType": "NODE_DEV",
       "packageName": "react-dom",
-      "size": 669872,
-      "gzip": 156183
+      "size": 668488,
+      "gzip": 155879
     },
     {
       "filename": "react-dom.production.min.js",
       "bundleType": "NODE_PROD",
       "packageName": "react-dom",
-      "size": 95530,
-      "gzip": 30637
+      "size": 98326,
+      "gzip": 31675
     },
     {
       "filename": "ReactDOM-dev.js",
@@ -676,15 +676,15 @@
       "filename": "scheduler.development.js",
       "bundleType": "NODE_DEV",
       "packageName": "scheduler",
-      "size": 21862,
-      "gzip": 5892
+      "size": 22846,
+      "gzip": 6139
     },
     {
       "filename": "scheduler.production.min.js",
       "bundleType": "NODE_PROD",
       "packageName": "scheduler",
-      "size": 4876,
-      "gzip": 1892
+      "size": 4915,
+      "gzip": 1912
     },
     {
       "filename": "SimpleCacheProvider-dev.js",
@@ -718,8 +718,8 @@
       "filename": "react-dom.profiling.min.js",
       "bundleType": "NODE_PROFILING",
       "packageName": "react-dom",
-      "size": 98599,
-      "gzip": 31327
+      "size": 101181,
+      "gzip": 32258
     },
     {
       "filename": "ReactNativeRenderer-profiling.js",
@@ -802,8 +802,8 @@
       "filename": "scheduler-tracing.development.js",
       "bundleType": "NODE_DEV",
       "packageName": "scheduler",
-      "size": 10400,
-      "gzip": 2366
+      "size": 10365,
+      "gzip": 2350
     },
     {
       "filename": "scheduler-tracing.production.min.js",

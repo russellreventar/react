@@ -4,17 +4,9 @@ import {
   unstable_trace as trace,
   unstable_wrap as wrap,
 } from 'scheduler/tracing';
-import {createResource} from 'react-cache';
-import {cache} from '../cache';
 import Spinner from './Spinner';
 import ContributorListPage from './ContributorListPage';
-
-const UserPageResource = createResource(() => import('./UserPage'));
-
-function UserPageLoader(props) {
-  const UserPage = UserPageResource.read(cache).default;
-  return <UserPage {...props} />;
-}
+import UserPage from './UserPage';
 
 export default class App extends PureComponent {
   state = {
@@ -76,9 +68,7 @@ export default class App extends PureComponent {
           }}>
           Return to list
         </button>
-        <Placeholder delayMs={2000} fallback={<Spinner size="large" />}>
-          <UserPageLoader id={id} />
-        </Placeholder>
+        <UserPage id={id}/>
       </div>
     );
   }
