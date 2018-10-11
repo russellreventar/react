@@ -52,9 +52,10 @@ export default class App extends PureComponent {
 
   render() {
     const {currentId, showDetail} = this.state;
-    return showDetail
-      ? this.renderDetail(currentId)
-      : this.renderList(currentId);
+    return this.renderDetail('sebmarkbage');
+    // return showDetail
+    //   ? this.renderDetail(currentId)
+    //   : this.renderList(currentId);
   }
 
   renderDetail(id) {
@@ -75,12 +76,12 @@ export default class App extends PureComponent {
 
   renderList(loadingId) {
     return (
-      <Placeholder delayMs={1500} fallback={<Spinner size="large" />}>
+      // <Placeholder delayMs={1500} fallback={<Spinner size="large" />}>
         <ContributorListPage
           loadingId={loadingId}
           onUserClick={this.handleUserClick}
         />
-      </Placeholder>
+      // </Placeholder>
     );
   }
 }

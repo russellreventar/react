@@ -15,9 +15,9 @@ const UserReposResource = createResource(fetchUserRepos(REPOS_TIMEOUT));
 const UserContent = ({id}) => {
   return (
     <div style={contentCss}>
-      {/* <Placeholder delayMs={1000} fallback={<Spinner size="medium" />}> */}
-      <Details id={id} />
-      {/* </Placeholder> */}
+      <Placeholder delayMs={1300} fallback={<Spinner size="medium" />}>
+        <Details id={id} />
+      </Placeholder>
       <Placeholder delayMs={1000} fallback={<Spinner size="medium" />}>
         <Repos id={id} />
       </Placeholder>
